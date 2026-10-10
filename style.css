@@ -1,0 +1,230 @@
+.dbi-trigger-btn {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--button-secondary-border-color, #4b5563);
+  background: var(--button-secondary-background-fill, #374151);
+  color: var(--button-secondary-text-color, #f3f4f6);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dbi-trigger-btn:hover {
+  filter: brightness(1.1);
+}
+
+.dbi-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.55);
+  align-items: center;
+  justify-content: center;
+}
+
+.dbi-modal {
+  width: 420px;
+  max-width: 90vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  background: var(--background-fill-primary, #1f2937);
+  color: var(--body-text-color, #f3f4f6);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+}
+
+.dbi-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.dbi-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dbi-lang {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.dbi-lang:hover,
+.dbi-lang:focus-within {
+  opacity: 1;
+}
+
+.dbi-lang-globe {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.dbi-lang-select {
+  appearance: auto;
+  width: auto;
+  max-width: 110px;
+  margin: 0;
+  padding: 2px 2px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dbi-lang-select option {
+  background: var(--background-fill-primary, #1f2937);
+  color: var(--body-text-color, #f3f4f6);
+}
+
+.dbi-close-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.dbi-modal-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dbi-text-input,
+.dbi-select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--input-background-fill, #111827);
+  color: inherit;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.dbi-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dbi-row label {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.dbi-category-group,
+.dbi-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dbi-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dbi-checkbox-row input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.dbi-checkbox-row input[type='checkbox']:disabled {
+  cursor: not-allowed;
+}
+
+.dbi-modal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dbi-btn {
+  flex: 1 1 auto;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dbi-btn:hover {
+  filter: brightness(1.15);
+}
+
+.dbi-btn-primary {
+  background: var(--button-primary-background-fill, #2563eb);
+  border-color: var(--button-primary-background-fill, #2563eb);
+  color: var(--button-primary-text-color, #ffffff);
+}
+
+.dbi-btn-secondary {
+  background: transparent;
+}
+
+.dbi-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translate(-50%, 12px);
+  background: #111827;
+  color: #f3f4f6;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  z-index: 10001;
+  pointer-events: none;
+}
+
+.dbi-toast-error {
+  border-color: #dc2626;
+  background: #7f1d1d;
+}
+
+.dbi-toast-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}

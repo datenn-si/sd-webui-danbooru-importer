@@ -1,0 +1,17 @@
+{
+  "selected_model": "Anima/Anima",
+  "language": "auto",
+  "categories": {
+    "recommended": true,
+    "rating": true,
+    "year": true,
+    "copyright": true,
+    "character": true,
+    "count_gender": true,
+    "artist": false,
+    "general": true,
+    "meta": true
+  },
+  "apply_resolution": true,
+  "apply_sort_order": true
+}

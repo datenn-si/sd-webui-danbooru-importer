@@ -1,0 +1,29 @@
+{
+  "display_name": "Anima (circlestone-labs/Anima)",
+  "recommended_prompts": "masterpiece, best quality, score_7",
+  "category_sort_order": [
+    "recommended",
+    "meta",
+    "year",
+    "rating",
+    "count_gender",
+    "character",
+    "copyright",
+    "artist",
+    "general"
+  ],
+  "resolution": {
+    "min": 512,
+    "max": 1536,
+    "step": 64
+  },
+  "artist_prefix": "@",
+  "count_tag_pattern": "^\\d+(girl|boy|other)s?$",
+  "year_format": "year {year}",
+  "rating_map": {
+    "g": "safe",
+    "s": "sensitive",
+    "q": "nsfw",
+    "e": "explicit"
+  }
+}
